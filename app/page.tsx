@@ -53,7 +53,7 @@ export default async function HomePage() {
           <a
             rel="noopener noreferrer"
             target="_blank"
-            href="https://github.com/mecperspicace"
+            href="https://github.com/mecperspicace/nextjs-portfolio"
             className="flex items-center gap-2"
           >
             <GitHubIcon />
@@ -86,10 +86,10 @@ export default async function HomePage() {
             className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://github.com/mecperspicace/nextjs-portfolio"
+            href="https://github.com/mecperspicace/"
           >
             <ArrowIcon />
-            <p className="h-7">view this on github</p>
+            <p className="h-7">visit my github</p>
           </a>
         </li>
       </ul>
