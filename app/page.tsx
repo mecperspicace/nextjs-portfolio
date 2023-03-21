@@ -86,10 +86,10 @@ export default async function HomePage() {
             className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://github.com/mecperspicace/"
+            href="mailto:mecperspicace@proton.me"
           >
             <ArrowIcon />
-            <p className="h-7">visit my github</p>
+            <p className="h-7">get in touch</p>
           </a>
         </li>
       </ul>
