@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Here's my brand new blog...",
+};
+
 export default async function BlogPage() {
   return (
     <section>

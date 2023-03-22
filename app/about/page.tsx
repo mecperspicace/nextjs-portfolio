@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+  description: "Here's small resume of my work and my life, hope you enjoy it!",
+};
+
 export default function AboutPage() {
   return (
     <section>

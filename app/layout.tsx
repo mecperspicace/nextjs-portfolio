@@ -1,59 +1,24 @@
-import './global.css';
-import clsx from 'clsx';
-import type { Metadata } from 'next';
-import localFont from '@next/font/local';
-import Sidebar from '../components/sidebar';
-import AnalyticsWrapper from '../components/analytics';
+import "./global.css";
+import clsx from "clsx";
+import type { Metadata } from "next";
+import localFont from "@next/font/local";
+import Sidebar from "../components/sidebar";
+import AnalyticsWrapper from "../components/analytics";
 
 const kaisei = localFont({
-  src: '../public/fonts/kaisei-tokumin-latin-700-normal.woff2',
-  weight: '700',
-  variable: '--font-kaisei',
-  display: 'swap',
+  src: "../public/fonts/kaisei-tokumin-latin-700-normal.woff2",
+  weight: "700",
+  variable: "--font-kaisei",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: 'MΞCPERSPICACE.xyz',
-    template: '%s | MΞCPERSPICACE.xyz',
-  },
-  description: 'Developer, trader, and student.',
-  openGraph: {
-    title: 'MΞCPERSPICACE.xyz',
-    description: 'Developer, trader, and student.',
-    url: 'https://mecperspicace.xyz',
-    siteName: 'MΞCPERSPICACE.xyz',
-    images: [
-      {
-        url: 'https://mecperspicace.xyz/og.jpg',
-        width: 1920,
-        height: 1080,
-      },
-    ],
-    locale: 'en-US',
-    type: 'website',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  twitter: {
-    title: 'MΞCPERSPICACE.xyz',
-    card: 'summary_large_image',
+    default: "MΞCPERSPICACE.xyz",
+    template: "%s • MΞCPERSPICACE.xyz",
   },
   icons: {
-    shortcut: '/favicon.ico',
-  },
-  verification: {
-    google: 'eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw',
-    yandex: '14d2e73487fa6c71',
+    shortcut: "/favicon.ico",
   },
 };
 
@@ -66,7 +31,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={clsx(
-        'text-black bg-white dark:text-white dark:bg-[#111010]',
+        "text-black bg-white dark:text-white dark:bg-[#111010]",
         kaisei.variable
       )}
     >
