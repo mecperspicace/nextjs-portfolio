@@ -41,14 +41,14 @@ export default function Navbar() {
 
   return (
     <aside className="md:w-[150px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0 font-serif">
-      <div className="lg:sticky">
+      <div className="lg:sticky lg:top-20">
         <div className="ml-2 md:ml-[12px] mb-2 px-4 md:px-0 md:mb-8 space-y-10 flex flex-col md:flex-row items-start ">
         </div>
         <nav
           className="flex overflow-hidden flex-row md:flex-col items-start relative px-4 md:px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
           id="nav"
         >
-          <div className="flex flex-row md:flex-col space-x-0 pr-10 mb-2 mt-2 md:mt-0">
+          <div className="flex flex-row md:flex-col space-x-0 pr-10 mb-2 md:mt-0">
             {navItems[pathname] ? (
               <>
                 {/* Desktop version, hidden on mobile, animates y axis */}
