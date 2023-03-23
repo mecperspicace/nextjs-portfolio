@@ -24,6 +24,13 @@ const navItems = {
     y: 69,
     w: '56px',
   },
+  
+  '/uses': {
+    name: 'uses',
+    x: 182,
+    y: 104,
+    w: '56px',
+  },
 };
 
 export default function Navbar() {

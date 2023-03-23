@@ -19,7 +19,7 @@ export default function AboutPage() {
           lot and now, I have reached a good level and I am fulfilled in what I
           do.
         </p>
-        <hr />
+        
         <p>
           Most of my work is available on my GitHub and I also work for clients.
           I master Python and Java as well as C and C++ for electronics (even
