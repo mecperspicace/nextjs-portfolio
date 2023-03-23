@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Uses",
   description:
-    "Here's what tech I'm currently using for coding, videos, and music.",
+    "Here's what tech I'm currently using for coding, gaming, and study.",
 };
 
 export default function UsesPage() {
@@ -14,15 +14,15 @@ export default function UsesPage() {
         Here's what tech I'm currently using for coding, gaming, and study.
       </p>
       <div className="prose prose-neutral dark:prose-invert">
-        <h3 id="computer-office">Computer / Office</h3>
+        <h3 id="computer-office">Computer / Setup</h3>
         <ul>
-          <li>16&quot; Macbook Pro (2020)</li>
-          <li>31.5&quot; LG UltraFine 32UN880</li>
-          <li>Logitech MX Master 3 Mouse</li>
-          <li>Apple Magic Keyboard</li>
-          <li>Focal XS 2.1 w/ Subwoofer</li>
-          <li>Autonomous SmartDesk 2</li>
-          <li>Autonomous ErgoChair 2</li>
+          <li>Custom PC Build</li>
+          <li>MSI 21:9 200Hz</li>
+          <li>Glorious Model O</li>
+          <li>Ducky One 2 Mini</li>
+          <li>Razer Seiren Mini</li>
+          <li>Razer Kraken v2</li>
+          <li>Raspberry PI 4 w/Fan</li>
         </ul>
       </div>
     </section>
