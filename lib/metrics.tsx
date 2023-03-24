@@ -1,21 +1,17 @@
-import 'server-only';
+import "server-only";
 
-import { Octokit } from '@octokit/rest';
-import { queryBuilder } from 'lib/planetscale';
-import { cache } from 'react';
+import { Octokit } from "@octokit/rest";
+import { cache } from "react";
 
-export const getBlogViews = cache(async () => {
-  if (!process.env.TWITTER_API_TOKEN) {
-    return 0;
-  }
+export async function getBlogViews() {
+  const apiURL =
+    "https://api.countapi.xyz/hit/mecperspicace.xyz/4be9cecc-f714-4ce4-b9e4-f5e50e5d1478";
 
-  const data = await queryBuilder
-    .selectFrom('views')
-    .select(['count'])
-    .execute();
+  const response = await fetch(apiURL)
+  const responseData = await response.json()
 
-  return data.reduce((acc, curr) => acc + Number(curr.count), 0);
-});
+  return responseData.value
+} 
 
 export async function getTweetCount() {
   if (!process.env.TWITTER_API_TOKEN) {
@@ -40,9 +36,9 @@ export const getStarCount = cache(async () => {
     auth: process.env.GITHUB_TOKEN,
   });
 
-  const req = await octokit.request('GET /repos/{owner}/{repo}', {
-    owner: 'mecperspicace',
-    repo: 'nextjs-portfolio',
+  const req = await octokit.request("GET /repos/{owner}/{repo}", {
+    owner: "mecperspicace",
+    repo: "nextjs-portfolio",
   });
 
   return req.data.stargazers_count;

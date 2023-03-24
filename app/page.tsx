@@ -1,13 +1,14 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { getBlogViews, getTweetCount, getStarCount } from 'lib/metrics';
+import Link from "next/link";
+import Image from "next/image";
+import countapi from "countapi-js";
+import { getBlogViews, getTweetCount, getStarCount } from "lib/metrics";
 import {
   ArrowIcon,
   GitHubIcon,
   TwitterIcon,
   ViewsIcon,
-} from 'components/icons';
-import { name, about, bio, avatar } from 'lib/info';
+} from "components/icons";
+import { name, about, bio, avatar } from "lib/info";
 
 export const revalidate = 60;
 
@@ -15,11 +16,7 @@ export default async function HomePage() {
   let starCount, views, tweetCount;
 
   try {
-    [starCount, views, tweetCount] = await Promise.all([
-      getStarCount(),
-      getBlogViews(),
-      getTweetCount(),
-    ]);
+    [starCount, views, tweetCount] = await Promise.all([getStarCount(), getBlogViews(), 0]);
   } catch (error) {
     console.error(error);
   }
@@ -47,8 +44,8 @@ export default async function HomePage() {
             className="flex items-center gap-2"
           >
             <TwitterIcon />
-            {/* {`${tweetCount.toLocaleString()} tweets all time`} */}
-            {`x tweets all time`}
+
+            {`${tweetCount.toLocaleString()} tweets all time`}
           </a>
           <a
             rel="noopener noreferrer"
@@ -61,8 +58,7 @@ export default async function HomePage() {
           </a>
           <Link href="/blog" className="flex items-center">
             <ViewsIcon />
-            {/* {`${views.toLocaleString()} blog views all time`} */}
-            {`x blog views all time`}
+            {`${views.toLocaleString()} blog views all time`}
           </Link>
         </div>
       </div>
