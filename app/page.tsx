@@ -37,7 +37,7 @@ export default async function HomePage() {
           priority
         />
         <div className="mt-8 md:mt-0 ml-0 md:ml-6 space-y-2 text-neutral-500 dark:text-neutral-400">
-          <a
+          {/* <a
             rel="noopener noreferrer"
             target="_blank"
             href="https://twitter.com/mecperspicace"
@@ -46,7 +46,7 @@ export default async function HomePage() {
             <TwitterIcon />
 
             {`${tweetCount.toLocaleString()} tweets all time`}
-          </a>
+          </a> */}
           <a
             rel="noopener noreferrer"
             target="_blank"
