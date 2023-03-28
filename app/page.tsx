@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import countapi from "countapi-js";
+import type { Metadata } from "next";
 import { getBlogViews, getTweetCount, getStarCount } from "lib/metrics";
 import {
   ArrowIcon,
@@ -11,6 +11,11 @@ import {
 import { name, about, bio, avatar } from "lib/info";
 
 export const revalidate = 60;
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Welcome to the home page...",
+};
 
 export default async function HomePage() {
   let starCount, views, tweetCount;
