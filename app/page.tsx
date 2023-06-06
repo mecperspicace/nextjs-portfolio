@@ -66,7 +66,7 @@ export default async function HomePage() {
             <ViewsIcon />
             {`${views.toLocaleString()} blog views all time`}
           </Link> */}
-          <Link href="/" className="flex items-center">
+          <Link href="https://explorer.multiversx.com/accounts/erd19jcvvj7v7re6pnmypjds2yvlzrwdvp0l8lxr5qn2mdlns7jt8xrqtccly5" className="flex items-center">
             <ViewsIcon />
             {`${assets.toLocaleString()} $EGLD staked`}
           </Link>

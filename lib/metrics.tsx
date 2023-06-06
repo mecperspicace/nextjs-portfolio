@@ -33,10 +33,17 @@ export const getStarCount = cache(async () => {
 
 export const getMultiversXAssets = cache(async () => {
   
-  const response = await fetch("https://api.multiversx.com/accounts/erd19jcvvj7v7re6pnmypjds2yvlzrwdvp0l8lxr5qn2mdlns7jt8xrqtccly5/delegation-legacy");
-  const data = await response.json()
+  var response = await fetch("https://api.multiversx.com/accounts/erd19jcvvj7v7re6pnmypjds2yvlzrwdvp0l8lxr5qn2mdlns7jt8xrqtccly5/delegation-legacy");
+  var data = await response.json()
 
   var total = Number(data.userActiveStake) + Number(data.claimableRewards)
+
+  response = await fetch("https://api.multiversx.com/accounts/erd19jcvvj7v7re6pnmypjds2yvlzrwdvp0l8lxr5qn2mdlns7jt8xrqtccly5/delegation-legacy");
+  data = await response.json()
+
+  total = Number(total) + Number(data.userActiveStake) + Number(data.claimableRewards)
+
+  
 
   return Number(total/1000000000000000000);
 })
