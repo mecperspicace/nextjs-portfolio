@@ -15,7 +15,9 @@ export async function getBlogViews() {
 
 export const getStarCount = cache(async () => {
 
-  var token = "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";
+  var token = "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";
+
+  console.log(token)
 
   const octokit = new Octokit({
     auth: token,
