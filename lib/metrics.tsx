@@ -38,7 +38,7 @@ export const getMultiversXAssets = cache(async () => {
 
   var total = Number(data.userActiveStake) + Number(data.claimableRewards)
 
-  response = await fetch("https://api.multiversx.com/accounts/erd19jcvvj7v7re6pnmypjds2yvlzrwdvp0l8lxr5qn2mdlns7jt8xrqtccly5/delegation-legacy");
+  response = await fetch("https://api.multiversx.com/accounts/erd19jcvvj7v7re6pnmypjds2yvlzrwdvp0l8lxr5qn2mdlns7jt8xrqtccly5/delegation");
   data = await response.json()
 
   total = Number(total) + Number(data.userActiveStake) + Number(data.claimableRewards)
