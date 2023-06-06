@@ -16,7 +16,6 @@ export async function getBlogViews() {
 export const getStarCount = cache(async () => {
   const octokit = new Octokit({
     auth: process.env.GITHUB_TOKEN,
-    baseUrl: 'https://api.github.com'
   });
 
   const req = await octokit.request("GET /repos/{owner}/{repo}", {
