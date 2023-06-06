@@ -23,7 +23,6 @@ export default async function HomePage() {
     starCount = await getStarCount();
     // views = await getBlogViews();
     assets = await getMultiversXAssets();
-    views = 1976
   } catch (error) {
     console.error(error);
   }
