@@ -11,29 +11,12 @@ export async function getBlogViews() {
   const responseData = await response.json()
 
   return responseData.value
-} 
-
-export async function getTweetCount() {
-  if (!process.env.TWITTER_API_TOKEN) {
-    return 0;
-  }
-
-  const response = await fetch(
-    `https://api.twitter.com/2/users/by/username/mecperspicace?user.fields=public_metrics`,
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.TWITTER_API_TOKEN}`,
-      },
-    }
-  );
-
-  const { data } = await response.json();
-  return Number(data.public_metrics.tweet_count);
 }
 
 export const getStarCount = cache(async () => {
   const octokit = new Octokit({
     auth: process.env.GITHUB_TOKEN,
+    baseUrl: 'https://api.github.com'
   });
 
   const req = await octokit.request("GET /repos/{owner}/{repo}", {
@@ -41,5 +24,17 @@ export const getStarCount = cache(async () => {
     repo: "nextjs-portfolio",
   });
 
-  return req.data.stargazers_count;
+  var star = req.data.stargazers_count
+
+  return Number(star);
 });
+
+export const getMultiversXAssets = cache(async () => {
+  
+  const response = await fetch("https://api.multiversx.com/accounts/erd19jcvvj7v7re6pnmypjds2yvlzrwdvp0l8lxr5qn2mdlns7jt8xrqtccly5/delegation-legacy");
+  const data = await response.json()
+
+  var total = Number(data.userActiveStake) + Number(data.claimableRewards)
+
+  return Number(total/1000000000000000000);
+})
