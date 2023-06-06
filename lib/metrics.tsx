@@ -15,12 +15,10 @@ export async function getBlogViews() {
 
 export const getStarCount = cache(async () => {
 
-  var token = "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";
-
-  console.log(token)
+  console.log(process.env.GITHUB_TOKEN)
 
   const octokit = new Octokit({
-    auth: token,
+    auth: process.env.GITHUB_TOKEN,
   });
 
   const req = await octokit.request("GET /repos/{owner}/{repo}", {
