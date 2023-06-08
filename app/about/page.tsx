@@ -19,15 +19,14 @@ export default function AboutPage() {
           electronics. Since that day, I have progressed a lot and now, I have
           reached a good level and I am fulfilled in what I do.
         </p>
-        <hr/>
+        <hr />
         <p>
           Most of my work is available on my{" "}
           <a href="https://github.com/mecperspicace">GitHub</a> and I also work
           for clients. I master <a href="https://python.org">Python</a> and{" "}
-          <a href="https://www.oracle.com/java/">Java</a>{" "}
-          as well as C and C++ for electronics (even the Raspberry is programmed
-          in Python), I'm learning databases like{" "}
-          <a href="https://mysql.com">MySQL</a> and{" "}
+          <a href="https://www.oracle.com/java/">Java</a> as well as C and C++
+          for electronics (even the Raspberry is programmed in Python), I'm
+          learning databases like <a href="https://mysql.com">MySQL</a> and{" "}
           <a href="https://mongodb.com">MongoDB</a> for my projects.
         </p>
         <p>
