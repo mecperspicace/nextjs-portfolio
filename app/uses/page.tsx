@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AnimationWrapper } from "components/animation-wrapper";
 
 export const metadata: Metadata = {
   title: "Uses",
@@ -8,7 +9,8 @@ export const metadata: Metadata = {
 
 export default function UsesPage() {
   return (
-    <section>
+    <AnimationWrapper>
+      <section>
         <h1 className="font-bold text-3xl font-serif mb-8">Uses</h1>
         <p className="text-neutral-700 dark:text-neutral-300 mt-2 mb-8">
           Here's what tech I'm currently using for coding, gaming, and study.
@@ -25,6 +27,7 @@ export default function UsesPage() {
             <li>Raspberry PI 4 w/Fan</li>
           </ul>
         </div>
-    </section>
+      </section>
+    </AnimationWrapper>
   );
 }
