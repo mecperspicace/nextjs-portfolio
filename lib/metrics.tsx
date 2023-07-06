@@ -28,6 +28,8 @@ export const getStarCount = cache(async () => {
 
   var star = req.data.stargazers_count
 
+  console.log(star);
+
   return Number(star);
 });
 
@@ -40,6 +42,8 @@ export const getMultiversXAssets = cache(async () => {
   const data2 = await response2.json()
 
   const total = Number(data.userActiveStake) + Number(data.claimableRewards) + Number(data2[0].userActiveStake) + Number(data2[0].claimableRewards)
+
+  console.log(total / 1000000000000000000);
 
   return total / 1000000000000000000;
 })
